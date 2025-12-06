@@ -1,0 +1,18 @@
+version: "3.9"
+
+services:
+  backend:
+    image: backend
+    build:
+      context: ./core
+      dockerfile: .dockerfile
+    ports:
+      - "8000:8000"
+
+    volumes:
+      - ./core:/core
+    environment:
+      - SECRET_KEY=test
+      - DEBUG=True
+
+    command: python manage.py runserver 0.0.0.0:8000
