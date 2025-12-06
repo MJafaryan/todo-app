@@ -7,14 +7,14 @@ class TaskModelAdmin(admin.ModelAdmin):
 
     model = TaskModel
 
-    list_display = ("title", "user", "created_at", "completed",)
-    list_filter = ("user", "completed",)
+    list_display = ("title", "user", "created_at", "is_complete",)
+    list_filter = ("user", "is_complete",)
     search_fields = ("user__username", "title",)
     ordering = ("-created_at",)
 
     fieldsets = (
         (None, {
-                "fields": ("title", "completed", "description",),
+                "fields": ("title", "is_complete", "description",),
         }),
         ("Important dates", {
                 "fields": ("created_at", "updated_at", "due_date",),
