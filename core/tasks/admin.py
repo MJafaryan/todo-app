@@ -17,7 +17,7 @@ class TaskModelAdmin(admin.ModelAdmin):
                 "fields": ("title", "is_complete", "description",),
         }),
         ("Important dates", {
-                "fields": ("created_at", "updated_at", "due_date",),
+                "fields": ("created_at", "updated_at", "due_time",),
         }),
         ("User information", {
                 "fields": ("user",),
