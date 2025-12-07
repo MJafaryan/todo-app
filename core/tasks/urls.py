@@ -1,6 +1,6 @@
 from django.urls import include, path
 
 urlpatterns = [
-    path("api/v1/", include("tasks.api.v1.urls"), name="api-v1"),
+    path("api/v1/", include("tasks.api.v1.urls"), name="tasks-api-v1"),
 ]
 
