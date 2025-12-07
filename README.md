@@ -27,75 +27,44 @@ docker compose up
 ### Project Structure:
 ```
     todo-app
+    ├── accounts
+    │   ├── admin.py
+    │   ├── api
+    │   │   ├── __init__.py
+    │   │   └── v1
+    │   │       ├── __init__.py
+    │   │       ├── serializers.py
+    │   │       ├── urls.py
+    │   │       └── views.py
+    │   ├── apps.py
+    │   ├── __init__.py
+    │   ├── models.py
+    │   ├── tests.py
+    │   ├── urls.py
+    │   └── views.py
     ├── core
-    │   ├── accounts
-    │   │   ├── admin.py
-    │   │   ├── apps.py
+    │   ├── asgi.py
+    │   ├── __init__.py
+    │   ├── settings.py
+    │   ├── urls.py
+    │   └── wsgi.py
+    ├── tasks
+    │   ├── admin.py
+    │   ├── api
     │   │   ├── __init__.py
-    │   │   ├── migrations
-    │   │   │   ├── 0001_initial.py
-    │   │   │   ├── __init__.py
-    │   │   │   └── __pycache__
-    │   │   │       ├── 0001_initial.cpython-312.pyc
-    │   │   │       └── __init__.cpython-312.pyc
-    │   │   ├── models.py
-    │   │   ├── __pycache__
-    │   │   │   ├── admin.cpython-312.pyc
-    │   │   │   ├── apps.cpython-312.pyc
-    │   │   │   ├── __init__.cpython-312.pyc
-    │   │   │   └── models.cpython-312.pyc
-    │   │   ├── tests.py
-    │   │   └── views.py
-    │   ├── core
-    │   │   ├── asgi.py
-    │   │   ├── __init__.py
-    │   │   ├── __pycache__
-    │   │   │   ├── __init__.cpython-312.pyc
-    │   │   │   ├── settings.cpython-312.pyc
-    │   │   │   └── urls.cpython-312.pyc
-    │   │   ├── settings.py
-    │   │   ├── urls.py
-    │   │   └── wsgi.py
-    │   ├── db.sqlite3
-    │   ├── manage.py
-    │   ├── requirements.txt
-    │   └── tasks
-    │       ├── admin.py
-    │       ├── api
-    │       │   ├── __init__.py
-    │       │   ├── __pycache__
-    │       │   │   └── __init__.cpython-312.pyc
-    │       │   └── v1
-    │       │       ├── __init__.py
-    │       │       ├── __pycache__
-    │       │       │   ├── __init__.cpython-312.pyc
-    │       │       │   ├── serializers.cpython-312.pyc
-    │       │       │   ├── urls.cpython-312.pyc
-    │       │       │   └── views.cpython-312.pyc
-    │       │       ├── serializers.py
-    │       │       ├── urls.py
-    │       │       └── views.py
-    │       ├── apps.py
-    │       ├── __init__.py
-    │       ├── migrations
-    │       │   ├── 0001_initial.py
-    │       │   ├── __init__.py
-    │       │   └── __pycache__
-    │       │       ├── 0001_initial.cpython-312.pyc
-    │       │       └── __init__.cpython-312.pyc
-    │       ├── models.py
-    │       ├── __pycache__
-    │       │   ├── admin.cpython-312.pyc
-    │       │   ├── apps.cpython-312.pyc
-    │       │   ├── __init__.cpython-312.pyc
-    │       │   ├── models.cpython-312.pyc
-    │       │   └── urls.cpython-312.pyc
-    │       ├── tests.py
-    │       ├── urls.py
-    │       └── views.py
-    ├── docker-compose.yml
-    ├── LICENSE
-    └── README.md
+    │   │   └── v1
+    │   │       ├── __init__.py
+    │   │       ├── serializers.py
+    │   │       ├── urls.py
+    │   │       └── views.py
+    │   ├── apps.py
+    │   ├── __init__.py
+    │   ├── models.py
+    │   ├── tests.py
+    │   ├── urls.py
+    │   └── views.py
+    ├── requirements.txt
+    └── manage.py
 ```
 
 ### Commit Convention:
