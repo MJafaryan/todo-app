@@ -16,8 +16,7 @@ class TasksListView(ListCreateAPIView):
     filterset_class = TaskModelFilters
 
     def get_queryset(self):
-        return TaskModel.objects.filter(user=self.request.user).order_by("-created_at")
-
+        return TaskModel.objects.filter(user=self.request.user)
 
     def perform_create(self, serializer):
         return serializer.save(user=self.request.user)
