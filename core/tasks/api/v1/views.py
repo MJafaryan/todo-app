@@ -1,7 +1,9 @@
+from django_filters.rest_framework import DjangoFilterBackend
 from django.shortcuts import get_object_or_404
 from rest_framework.generics import ListCreateAPIView, RetrieveUpdateDestroyAPIView
 from rest_framework.permissions import IsAuthenticated
 from tasks.models import TaskModel
+from .filters import TaskModelFilters
 from .serializers import TaskSerializer
 
 class TasksListView(ListCreateAPIView):
@@ -10,8 +12,11 @@ class TasksListView(ListCreateAPIView):
     permission_classes = [IsAuthenticated,]
     serializer_class = TaskSerializer
 
+    filter_backends = [DjangoFilterBackend,]
+    filterset_class = TaskModelFilters
+
     def get_queryset(self):
-        return TaskModel.objects.filter(user=self.request.user)
+        return TaskModel.objects.filter(user=self.request.user).order_by("-created_at")
 
 
     def perform_create(self, serializer):

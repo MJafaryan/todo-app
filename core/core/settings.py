@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "rest_framework",
+    "django_filters",
     "accounts.apps.AccountsConfig",
     "tasks.apps.TasksConfig",
 ]
@@ -134,3 +135,11 @@ AUTH_USER_MODEL = "accounts.UserModel"
 # LOGIN/LOGOUT Redirects
 
 LOGIN_REDIRECT_URL = "tasks-list"
+
+# REST FRAMEWORK Settings
+
+REST_FRAMEWORK = {
+    "DEFAULT_FILTER_BACKENDS": ["django_filters.rest_framework.DjangoFilterBackend",],
+    "DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.PageNumberPagination",
+    "PAGE_SIZE": 20,
+}
