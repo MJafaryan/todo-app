@@ -53,6 +53,7 @@ docker compose up
     │   ├── api
     │   │   ├── __init__.py
     │   │   └── v1
+    |   │       ├── filters.py
     │   │       ├── __init__.py
     │   │       ├── serializers.py
     │   │       ├── urls.py
@@ -63,6 +64,7 @@ docker compose up
     │   ├── tests.py
     │   ├── urls.py
     │   └── views.py
+    ├── .dockerfile
     ├── requirements.txt
     └── manage.py
 ```
